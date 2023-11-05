@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #dadada;
+}
+
+.nav {
+  position: relative;
+  font-size: 30px;
+  margin: 20px;
+  font-weight: 700;
+}
+
+.totalimage {
+  background-color: rgb(238, 238, 238);
+  margin: 25px;
+  font-size: 20px;
+}
+
+.Checkboxnavber {
+  position: absolute;
+  display: flex;
+  background-color: rgb(238, 238, 238);
+  border-radius: 16px 16px 0px 0px;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.Checkboxnavber p {
+  position: relative;
+  font-size: 20px;
+  margin-left: 55px;
+  margin-top: 25px;
+}
+
+#delete {
+  align-items: left;
+  color: rgb(255, 39, 39);
+  background-color: rgba(255, 255, 255);
+  font-size: 15px;
+  height: 40px;
+  border-radius: 8px;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.301);
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+#delete:hover {
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 39, 39);
+  background-color: rgb(255, 39, 39);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#SelectAll {
+  color: rgb(39, 176, 255);
+  border: 1px solid rgba(0, 0, 0, 0.301);
+  background-color: rgba(255, 255, 255);
+  font-size: 15px;
+  height: 40px;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+#SelectAll:hover {
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(39, 176, 255);
+  background-color: rgb(39, 176, 255);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.image-container {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center; 
+  border-radius: 13px;
+
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  background-color: rgb(255, 255, 255);
+  transition: transform 0.1s ease;
+}
+
+/* Make the feature image larger than the others*/
+.image-container:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.image-container:hover {
+  transform: scale(1.03);
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio of the image */
+  border-radius: 12px;
+  transition: transform 1s ease;
+}
+
+.overlay {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 11px;
+  background-color: rgba(0, 0, 0, 0.397);
+}
+.overlay:hover {
+  opacity: 100%;
+}
+
+label {
+  width: 215px;
+  height: 215px;
+  display: flex;
+  cursor: pointer;
+  font-size: large;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px dotted black;
+  background-color: white;
+}
+
+label:hover,
+.upload-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.image-container input {
+  top: 10px;
+  bottom: 0px;
+  left: 10px;
+  right: 20px;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  position: absolute;
+  accent-color: blue;
+}
+
+input {
+  display: none;
+}
+
+#box {
+  position: absolute;
+  margin-top: 3px;
+  margin-left: -30px;
+}
+
+@media ((min-width: 1500px)) {
+  .topbar {
+    position: relative;
+    display: flex;
+    background-color: rgb(238, 238, 238);
+    margin: 1% 15% 0% 15%;
+    height: 80px;
+    border-radius: 18px 18px 0px 0px;
+    justify-content: space-between;
+    min-width: 550px;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 40px;
+    padding: 40px;
+    margin: 0% 15%;
+    background-color: #f7f7f7;
+    border-radius: 0px 0px 18px 18px;
+    min-width: 470px;
+  }
+}
+
+@media ((max-width: 1500px)) {
+  .topbar {
+    position: relative;
+    display: flex;
+    background-color: rgb(238, 238, 238);
+    height: 80px;
+    border-radius: 18px 18px 0px 0px;
+    justify-content: space-between;
+    min-width: 550px;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 40px;
+    padding: 40px;
+    background-color: #f7f7f7;
+    border-radius: 0px 0px 18px 18px;
+    min-width: 470px;
+  }
+}
